@@ -2,6 +2,7 @@ import './App.css'
 import React,{useState} from 'react';
 import NotificationList from './components/NotificationList';
 import {Notification} from './types/Notification';
+import requestLogger from './LoggingMiddleware/requestLogger';
 function App() {
   const[notifications,setNotifications]=useState<Notification[]>([]);
   const[filterType,setFilterType]=useState<'info'|'warning'|'error'|undefined>(undefined);
