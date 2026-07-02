@@ -15,6 +15,7 @@ const NotificationList:React.FC<NotificationListProps>=({notifications,filterTyp
         <div key={notification.id}className={`notification ${notification.type}`}>
           <p>{notification.message}</p>
           <span>Priority: {notification.priority}</span>
+          <span> Viewed:{notification.viewed?'Yes':'No'}</span>
         </div>
       ))}
     </div>
